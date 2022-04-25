@@ -11,6 +11,10 @@ export class Http {
     this.option.url = url;
   }
 
+  complete(complete) {
+    this.option.complete = complete
+  }
+
   get(data, success, fail) {
     this.option.method = 'GET'
     this.option.data = data
