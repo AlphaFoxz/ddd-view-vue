@@ -2,33 +2,39 @@
   <view class="content">
     <image class="logo" src="/static/logo.png"></image>
     <view class="text-area">
-      <text @click="navigateTo('/pages/index/3dtest')" class="title">{{ title }}</text>
-      <RightWindow/>
+      <text class="title">{{ title }}</text>
     </view>
+    <World>
+      <ThirdPersonCamera active mouseControl>
+        <Model
+            src="src/3dmodels/sofa_03_4k.gltf"
+            rotation=""
+            pbr
+        />
+      </ThirdPersonCamera>
+    </World>
   </view>
 </template>
 
 <script>
-  import RightWindow from '@c/right-window'
+  import {World, Cube, ThirdPersonCamera, Model, Editor} from 'lingo3d-vue'
+
   export default {
     components: {
-      RightWindow
+      World,
+      Cube,
+      ThirdPersonCamera,
+      Model,
+      Editor
     },
     data() {
       return {
         title: 'Hello',
       }
     },
-    onLoad() {},
-    methods: {
-      navigateTo(url) {
-        uni.navigateTo({
-          url: url,
-          animationType: 'pop-in',
-          animationDuration: 300
-        })
-      }
+    onLoad() {
     },
+    methods: {},
   }
 </script>
 

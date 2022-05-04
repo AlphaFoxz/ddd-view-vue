@@ -1386,7 +1386,7 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@lincode/events@*":
+"@lincode/events@*", "@lincode/events@1.0.23":
   version "1.0.23"
   resolved "https://registry.npmmirror.com/@lincode/events/-/events-1.0.23.tgz#dcce13faafde2ce898deb17fc4762313118755f6"
   integrity sha512-6gzpHV0p8gXhbLvlE5ggj76H2AKZpAWOZBTsQWmeGCXbHlV5SQs2eHbrsZ2/fHJLQDHK1E6KfP4R81YIBQI2sA==
@@ -1394,26 +1394,26 @@
     "@lincode/promiselikes" "*"
     "@lincode/utils" "*"
 
-"@lincode/filetypes@*":
+"@lincode/filetypes@1.0.1":
   version "1.0.1"
   resolved "https://registry.npmmirror.com/@lincode/filetypes/-/filetypes-1.0.1.tgz#e648e6dfb6905456543459956ba3161c5c086b8e"
   integrity sha512-ltOOAqFCz9zRmhhis624r9ME7XNP2gYOAECa4kD5LxwEqZBto1/JK0mimDcnb6pZf4gvUjO+9tTyykQJfIcy4Q==
   dependencies:
     "@lincode/utils" "*"
 
-"@lincode/math@*":
+"@lincode/math@1.0.8":
   version "1.0.8"
   resolved "https://registry.npmmirror.com/@lincode/math/-/math-1.0.8.tgz#ed8ae14638b7e4d3834868ac4efc9bdb1e18bee6"
   integrity sha512-lgjk6Wv3YdVTsLQD1wSj8w6xyGYR66Dvg/Nu1wQUYWicYKijuDZC4UMaYjY7jb1Zf2Iwi6RVdP4iFkrdPztsBw==
 
-"@lincode/promiselikes@*":
+"@lincode/promiselikes@*", "@lincode/promiselikes@1.0.19":
   version "1.0.19"
   resolved "https://registry.npmmirror.com/@lincode/promiselikes/-/promiselikes-1.0.19.tgz#e47564b9830316fbe85e8ce6a3e3e4fe1f2b6915"
   integrity sha512-lLT+6IfCgo7ByvE9trgi3g3l/ol4sneXCNOrySYvkkFeqxJWhwb/fR24EKEpPb/CPREJolgutcMkuN7PExnaCA==
   dependencies:
     "@lincode/utils" "*"
 
-"@lincode/reactivity@*":
+"@lincode/reactivity@1.0.59":
   version "1.0.59"
   resolved "https://registry.npmmirror.com/@lincode/reactivity/-/reactivity-1.0.59.tgz#36afa01d95e10c4597417063c7f4d3fc858b6564"
   integrity sha512-maMpRBTaMiSG+lXXsXH7AAjDM2EnFx25iHc8gZEuWvwjsHaGtufoWS3vp/A6W2LukP71CUvStjz9tm2Zs7vODA==
@@ -1422,7 +1422,7 @@
     "@lincode/promiselikes" "*"
     "@lincode/utils" "*"
 
-"@lincode/utils@*":
+"@lincode/utils@*", "@lincode/utils@1.2.46":
   version "1.2.46"
   resolved "https://registry.npmmirror.com/@lincode/utils/-/utils-1.2.46.tgz#b6ebffbc688dbe799c951e7f426eab985caffdd7"
   integrity sha512-s4J4BBCJI+j/IGG5Ec36TQyfREYMVEnzao8Y62TMRjsSidQwsHt/Q7XLDcgqQl2/9FmXketwPW0WROfD3bUMag==
@@ -1455,11 +1455,6 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
-
-"@pinyinma/guid@*":
-  version "1.0.1"
-  resolved "https://registry.npmmirror.com/@pinyinma/guid/-/guid-1.0.1.tgz#0142625510164dd3852775a3cd98d29e1c6aa39d"
-  integrity sha512-U8rv4xNplWfdGTUoFp8/hpEOgmeD9nM3qODmPk4fpNy6+nkncj6TYY70ZM7icjVlN82Lh3hFnuPC8sjlHz7Sxw==
 
 "@rollup/pluginutils@^4.1.2":
   version "4.2.0"
@@ -2604,6 +2599,13 @@ fraction.js@^4.2.0:
   resolved "https://registry.npmmirror.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
+framesync@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.npmmirror.com/framesync/-/framesync-6.0.1.tgz#5e32fc01f1c42b39c654c35b16440e07a25d6f20"
+  integrity sha512-fUY88kXvGiIItgNC7wcTOl0SNRCVXMKSWW2Yzfmn7EKNc+MpCzcz9DhdHcdjbrtN3c6R4H5dTY2jiCpPdysEjA==
+  dependencies:
+    tslib "^2.1.0"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.npmmirror.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -2712,6 +2714,11 @@ he@^1.1.0:
   version "1.2.0"
   resolved "https://registry.npmmirror.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+
+hey-listen@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmmirror.com/hey-listen/-/hey-listen-1.0.8.tgz#8e59561ff724908de1aa924ed6ecc84a56a9aa68"
+  integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==
 
 howler@2:
   version "2.2.3"
@@ -2925,18 +2932,26 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npmmirror.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-lingo3d@1.10.114:
-  version "1.10.114"
-  resolved "https://registry.npmmirror.com/lingo3d/-/lingo3d-1.10.114.tgz#e8cec1c99c3ed91f19a6461060c31858d462d618"
-  integrity sha512-AHUfchEoT6Icc/MxSUPbgsw83uK0/1WOc6ojqRu/XR11bPwJX/gnR6H8nLLGTKLdQO79hHMRaL+a9mpsWgCo/A==
+lingo3d-vue@^1.0.39:
+  version "1.0.39"
+  resolved "https://registry.npmmirror.com/lingo3d-vue/-/lingo3d-vue-1.0.39.tgz#24577a209c2bfbe8239f3a1047976d2a68764b8b"
+  integrity sha512-evNr20rVeGM/nQ+ZB1IEFLPKD1AkOXF1vKl7Prvm2aemIJlvVcW0dR8gYtcD1QWviDOhOeaz5lEEOLGp5kqzhw==
   dependencies:
-    "@lincode/events" "*"
-    "@lincode/filetypes" "*"
-    "@lincode/math" "*"
-    "@lincode/promiselikes" "*"
-    "@lincode/reactivity" "*"
-    "@lincode/utils" "*"
-    "@pinyinma/guid" "*"
+    lingo3d "1.10.122"
+    nanoid "3"
+    popmotion "11"
+
+lingo3d@1.10.122:
+  version "1.10.122"
+  resolved "https://registry.npmmirror.com/lingo3d/-/lingo3d-1.10.122.tgz#83ff61b82365cb62d9654df54e1512c2e548e2cc"
+  integrity sha512-AKd707MKPqPq6d4T7DHmawFpOmaeSgzkB6vGohaG0UEEkhvUzVHlLplSL0VmmwYdXS80sV1u5CR0TiUxwkwdXA==
+  dependencies:
+    "@lincode/events" "1.0.23"
+    "@lincode/filetypes" "1.0.1"
+    "@lincode/math" "1.0.8"
+    "@lincode/promiselikes" "1.0.19"
+    "@lincode/reactivity" "1.0.59"
+    "@lincode/utils" "1.2.46"
     "@tweakpane/core" "1"
     "@types/three" "0.139.0"
     cannon-es "0.19.0"
@@ -3151,6 +3166,11 @@ ms@2.1.3:
   resolved "https://registry.npmmirror.com/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
 
+nanoid@3:
+  version "3.3.3"
+  resolved "https://registry.npmmirror.com/nanoid/-/nanoid-3.3.3.tgz#fd8e8b7aa761fe807dba2d1b98fb7241bb724a25"
+  integrity sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==
+
 nanoid@^3.3.1:
   version "3.3.1"
   resolved "https://registry.npmmirror.com/nanoid/-/nanoid-3.3.1.tgz#6347a18cac88af88f58af0b3594b723d5e99bb35"
@@ -3316,6 +3336,16 @@ pkg-dir@^4.1.0:
   integrity sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
   dependencies:
     find-up "^4.0.0"
+
+popmotion@11:
+  version "11.0.3"
+  resolved "https://registry.npmmirror.com/popmotion/-/popmotion-11.0.3.tgz#565c5f6590bbcddab7a33a074bb2ba97e24b0cc9"
+  integrity sha512-Y55FLdj3UxkR7Vl3s7Qr4e9m0onSnP8W7d/xQLsoJM40vs6UKHFdygs6SWryasTZYqugMjm3BepCF4CWXDiHgA==
+  dependencies:
+    framesync "6.0.1"
+    hey-listen "^1.0.8"
+    style-value-types "5.0.0"
+    tslib "^2.1.0"
 
 postcss-comment@^2.0.0:
   version "2.0.0"
@@ -3783,6 +3813,14 @@ strip-final-newline@^2.0.0:
   resolved "https://registry.npmmirror.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
   integrity sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
 
+style-value-types@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmmirror.com/style-value-types/-/style-value-types-5.0.0.tgz#76c35f0e579843d523187989da866729411fc8ad"
+  integrity sha512-08yq36Ikn4kx4YU6RD7jWEv27v4V+PUsOGa4n/as8Et3CuODMJQ00ENeAVXAeydX4Z2j1XHZF1K2sX4mGl18fA==
+  dependencies:
+    hey-listen "^1.0.8"
+    tslib "^2.1.0"
+
 stylus-loader@^6.1.0:
   version "6.2.0"
   resolved "https://registry.npmmirror.com/stylus-loader/-/stylus-loader-6.2.0.tgz#0ba499e744e7fb9d9b3977784c8639728a7ced8c"
@@ -3868,6 +3906,11 @@ toidentifier@1.0.1:
   version "1.0.1"
   resolved "https://registry.npmmirror.com/toidentifier/-/toidentifier-1.0.1.tgz#3be34321a88a820ed1bd80dfaa33e479fbb8dd35"
   integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
+
+tslib@^2.1.0:
+  version "2.4.0"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
+  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 tweakpane@3:
   version "3.0.8"
