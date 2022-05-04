@@ -1,9 +1,5 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
-      <text class="title">{{ title }}</text>
-    </view>
     <World>
       <ThirdPersonCamera active mouseControl>
         <Model
@@ -29,7 +25,6 @@
     },
     data() {
       return {
-        title: 'Hello',
       }
     },
     onLoad() {
@@ -38,7 +33,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   .content {
     display: flex;
     flex-direction: column;
@@ -55,13 +50,4 @@
     margin-bottom: 50 rpx;
   }
 
-  .text-area {
-    display: flex;
-    justify-content: center;
-  }
-
-  .title {
-    font-size: 36 rpx;
-    color: #8f8f94;
-  }
 </style>

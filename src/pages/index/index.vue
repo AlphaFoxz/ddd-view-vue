@@ -1,25 +1,26 @@
 <template>
+  <view class="text-area">
+    <text class="title">{{ title }}</text>
+  </view>
   <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
-    <view class="text-area">
-      <text @click="navigateTo('/pages/index/3dtest')" class="title">{{ title }}</text>
-      <RightWindow/>
-    </view>
+    <BottomWindow class="bottom-window"/>
   </view>
 </template>
 
 <script>
-  import RightWindow from '@c/right-window'
+  import BottomWindow from '@c/layout/bottom-window.vue'
+
   export default {
     components: {
-      RightWindow
+      BottomWindow,
     },
     data() {
       return {
         title: 'Hello',
       }
     },
-    onLoad() {},
+    onLoad() {
+    },
     methods: {
       navigateTo(url) {
         uni.navigateTo({
@@ -32,9 +33,21 @@
   }
 </script>
 
-<style>
+<style scoped>
+  .bottom-window{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 100vw
+  }
+  @media (min-width: 768px) {
+    .bottom-window{
+      display: none
+    }
+  }
   .content {
     display: flex;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -47,11 +60,6 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50 rpx;
-  }
-
-  .text-area {
-    display: flex;
-    justify-content: center;
   }
 
   .title {
