@@ -1,22 +1,18 @@
 'use strict';
 
 import {encodeCompositeMetadata, encodeRoute, WellKnownMimeType} from 'rsocket-composite-metadata'
-import {tcpConfig} from './config.js'
+import {websocketConfig} from './config.js'
 import {RSocketConnector} from "rsocket-core"
-import {TcpClientTransport} from "rsocket-tcp-client"
+import {WebsocketClientTransport} from "rsocket-websocket-client"
+import Buffer from "./buffer"
 
 const MESSAGE_RSOCKET_ROUTING = WellKnownMimeType.MESSAGE_RSOCKET_ROUTING
 const connector = new RSocketConnector({
-  setup: {
-    dataMimeType: 'application/json',
-    metadataMimeType: 'message/x.rsocket.routing.v0',
-  },
-  transport: new TcpClientTransport({
-    connectionOptions: {
-      host: tcpConfig.host,
-      port: tcpConfig.port,
+  transport: new WebsocketClientTransport({
+    url: websocketConfig.url,
+    wsCreator: (url) => {
+      return new WebSocket(url)
     },
-    socketCreator: (url) => { return new WebSocket(url)}
   }),
 })
 
@@ -51,9 +47,11 @@ function requestResponse(rsocket, route, data, logger) {
           resolve(payload);
         },
         onComplete: () => {
+          logger.message('onComplete')
           resolve(null);
         },
         onExtension: () => {
+          logger.message('onExtension')
         },
       }
     )
@@ -78,8 +76,8 @@ const defLogger = {
   }
 }
 
-class TcpApi {
-  _rSocket
+class SocketApi {
+  _webSocket
   _logger = defLogger
 
   constructor(logger) {
@@ -96,7 +94,7 @@ class TcpApi {
     }
     this._logger = logger
     connector.connect().then((rsocket) => {
-      this._rSocket = rsocket
+      this._webSocket = rsocket
       this._logger.success('连接服务器成功!')
       rsocket.onClose(() => {
         this._logger.error('连接已断开')
@@ -105,8 +103,8 @@ class TcpApi {
   }
 
   disconnect() {
-    if (this._rSocket) {
-      this._rSocket.close()
+    if (this._webSocket) {
+      this._webSocket.close()
     }
   }
 
@@ -129,4 +127,4 @@ class TcpApi {
   }
 }
 
-export {TcpApi}
+export {SocketApi}

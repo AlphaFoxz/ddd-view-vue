@@ -1,6 +1,6 @@
 <script setup lang="js">
 import {ref} from 'vue'
-import {TcpApi} from '../script/api-tcp.js'
+import {SocketApi} from '../script/api-socket.js'
 const SUCCESS = 'success'
 const ERROR = 'error'
 const INFO = 'info'
@@ -61,7 +61,7 @@ export default {
       remindList: [],
       remindIndex: -1,
       placeholder: '',
-      tcpApi: null
+      socketApi: null
     }
   },
   methods: {
@@ -198,10 +198,10 @@ export default {
         this.appendLog(content, MESSAGE)
       }
     }
-    this.tcpApi = new TcpApi(logger)
+    this.socketApi = new SocketApi(logger)
   },
   unmounted() {
-    this.tcpApi.disconnect()
+    this.socketApi.disconnect()
   }
 }
 

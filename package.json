@@ -9,20 +9,21 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "net": "^1.0.2",
-    "rsocket-adapter-rxjs": "1.0.0-alpha.4",
-    "rsocket-composite-metadata": "1.0.0-alpha.3",
+    "@types/node": "^18.7.13",
     "rsocket-core": "1.0.0-alpha.3",
-    "rsocket-messaging": "1.0.0-alpha.3",
     "rsocket-tcp-client": "1.0.0-alpha.3",
-    "rsocket-tcp-server": "1.0.0-alpha.3",
-    "rsocket-websocket-client": "1.0.0-alpha.3",
-    "rsocket-websocket-server": "1.0.0-alpha.3",
+    "typescript": "^4.6.4",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
-    "typescript": "^4.6.4",
+    "path-browserify": "^1.0.1",
+    "rsocket-adapter-rxjs": "1.0.0-alpha.4",
+    "rsocket-composite-metadata": "1.0.0-alpha.3",
+    "rsocket-messaging": "1.0.0-alpha.3",
+    "rsocket-tcp-server": "1.0.0-alpha.3",
+    "rsocket-websocket-client": "1.0.0-alpha.3",
+    "rsocket-websocket-server": "1.0.0-alpha.3",
     "vite": "^3.0.7",
     "vue-tsc": "^0.39.5"
   }
